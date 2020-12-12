@@ -3,17 +3,92 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1500px)
+  .main-head
+    padding: 25px 0 30px
+    .logo
+      width: 200px
+
+  .main-mnu
+    li
+      font-size: 16px
+      ul
+        padding-left: 60px
+        li
+          font-size: 18px
+          margin-bottom: 25px
+          &:before
+            width: 12px
+            height: 12px
+            left: -22px
+
+@media (max-width: 1300px)
+  .main-mnu
+    display: none
+
+  .hamburger
+    display: block
+
 // ≥1200px
 +media-breakpoint-down(lg)
 
 // ≥992px
 +media-breakpoint-down(md)
+  .main-head
+    .container
+      flex-wrap: wrap
+    .logo
+      width: 160px
+
+  .head-contacts
+    .btn
+      font-size: 14px
+      padding: 10px
+      width: 200px
+    .phone
+      font-size: 18px
+
+
 
 // ≥768px
 +media-breakpoint-down(sm)
+  .head-contacts
+    order: 2
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 20px
+    display: none
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .main-head
+    padding: 10px 0 15px
+
+  .head-contacts
+    display: none
+    .btn
+      width: 160px
+      margin-left: 0
+
+@media (max-width: 390px)
+
+  .mm-logo
+    width: 160px
+
+  .mobile-contacts
+    .btn
+      font-size: 16px
+      width: 200px
+
+  .head-contacts
+    flex-direction: column
+    .phone
+      margin-bottom: 12px
+    .btn
+      width: 200px
+
 
 
 /*==========  Mobile First  ==========*/
