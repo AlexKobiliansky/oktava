@@ -1,0 +1,93 @@
+.main-head
+  line-height: 1
+  padding: 33px 0 46px
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.head-contacts
+  font-size: 0
+  .btn
+    margin-left: 30px
+    font-size: 18px
+  .phone
+    font-size: 21px
+    font-weight: 700
+    color: $accent
+    &:hover
+      color: lighten($accent, 15%)
+
+
+.main-mnu
+  font-size: 0
+  &>ul
+    &>li
+      padding: 20px 20px 20px 0
+  li
+    display: inline-block
+    font-size: 18px
+    margin-right: 38px
+    position: relative
+    &:last-child
+      margin-right: 0
+      padding-right: 0
+    &.droppy__parent
+      &:after
+        content: ''
+        position: absolute
+        width: 12px
+        height: 12px
+        background-image: url('../img/icons/select-arrow-blue.svg')
+        +bg-cover
+        top: 50%
+        transform: translateY(-50%)
+        right: -3px
+      &.opened
+        &:after
+          transform: translateY(-50%) rotate(180deg)
+    ul
+      position: absolute
+      box-shadow: 0 0 10px 3px rgba(#000, .07)
+      width: 350px
+      padding: 38px 0 35px 110px
+      top: calc(100% - 5px)
+      background-color: #fff
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 2
+      li
+        display: block
+        margin-right: 0
+        font-size: 21px
+        margin-bottom: 30px
+        padding-right: 30px
+        position: relative
+        &:last-child
+          margin-bottom: 0
+        &:before
+          content: ''
+          position: absolute
+          width: 15px
+          height: 15px
+          background-image: url('../img/icons/attr-arrow-blue.svg')
+          +bg-cover
+          top: 0
+          left: -25px
+          +mt(.2s)
+          opacity: 0
+        &.hovered
+          &:before
+            opacity: 1
+        &.droppy__parent
+          &:after
+            transform: rotate(-90deg)!important
+            right: 10px!important
+            top: 6px!important
+        ul
+          left: 100%
+          top: -30px
+          transform: none
+          padding-left: 60px
+  a
+    color: $accent
