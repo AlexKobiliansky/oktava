@@ -67,10 +67,11 @@ $(document).ready(function(){
 
 
 
+
     // new CircleType(document.getElementById('intro-curve'));
         new CircleType(document.getElementById('intro-curve'));
 
-        $('.curve-span').css('animation-name', 'rotateAnimation')
+        // $('.curve-span').css('animation-name', 'rotateAnimation')
 
 
 
@@ -118,29 +119,17 @@ $(document).ready(function(){
         dots: false,
         animateIn: "fadeIn",
         animateOut: "fadeOut",
-        // mouseDrag: false,
+        mouseDrag: false,
         touchDrag: false,
         smartSpeed:700,
-        // autoplay: true,
+        autoplay: true,
         autoplayTimeout: 7000,
         autoplaySpeed: 2000,
-        // navText: false,
-        // responsive: {
-        //     0: {
-        //         nav: false
-        //     },
-        //     1300: {
-        //         nav: true
-        //     }
-        // }
     });
 
     owl.on('changed.owl.carousel', function(e) {
 
-
         let currentSlideIndex = e.item.index + 1;
-
-
 
         let currentSlide = $(".intro-slider .owl-item:nth-child("+currentSlideIndex+")");
         let prevSlide = $(".intro-slider .owl-item:nth-child("+(currentSlideIndex-1)+")");
@@ -163,8 +152,6 @@ $(document).ready(function(){
         $('.intro-nav-current span').text(curItemPreview)
         $('.intro-nav-prev span').text(prevItemPreview)
         $('.intro-nav-next span').text(nextItemPreview)
-
-
     });
 
 
@@ -179,6 +166,55 @@ $(document).ready(function(){
 
 
 
+    $('.general-slider').owlCarousel({
+        loop: false,
+        nav:true,
+        navText: false,
+        items: 4,
+        dots: false,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+                nav: false,
+                dots: true
+            },
+            480: {
+                items: 2,
+                margin: 10
+            },
+            992: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            }
+        }
+    });
+
+    function heightses() {
+
+        $('.cat-item-title').matchHeight({byRow: true,});
+
+        if ($(window).width()>=480) {
+        }
+    }
+
+    heightses();
+
+    let categoriesNum = $('.index-cat-slider').find('.cat-item').length;
+    let c;
+
+    for (c=0; c<categoriesNum; c++) {
+        new CircleType(document.getElementById('category-curve-' + c));
+    }
+
+
+
+    $('.curve-span').css('animation-name', 'rotateAnimation')
+
+
     $(window).scroll(function() {
         if($(this).scrollTop() > 60) {
             $('.main-head').addClass('sticky')
@@ -186,6 +222,8 @@ $(document).ready(function(){
             $('.main-head').removeClass('sticky')
         }
     });
+
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);

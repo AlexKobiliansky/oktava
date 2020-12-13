@@ -4,6 +4,21 @@
 /*==========  Desktop First  ==========*/
 
 @media (max-width: 1800px)
+
+
+  .general-slider
+    width: calc(100% - 50px)
+    margin: 0 auto
+    .owl-nav
+      button.owl-prev, button.owl-next
+        width: 60px
+        height: 60px
+        background-size: 16px 16px
+      button.owl-prev
+        left: -30px
+      button.owl-next
+        right: -30px
+
   .intro-socials
     right: auto
     top: auto
@@ -23,6 +38,22 @@
 
 
 @media (max-width: 1500px)
+
+  .cat-item
+    padding-bottom: 50px
+    &-img
+      padding: 0
+      height: 220px
+    &-title
+      font-size: 20px
+
+  .section-half-wrapper
+    .content
+      width: 900px
+
+  .cat-item
+    &-title
+      padding: 0
 
   .s-first
     padding-top: 113px
@@ -77,6 +108,34 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .general-slider
+    width: calc(100% - 30px)
+    .owl-stage-outer
+      padding-top: 30px
+      padding-bottom: 30px
+    //.owl-nav
+    //  button.owl-prev
+    //    left: -15px
+    //  button.owl-next
+    //    right: -15px
+
+  .s-index-catalog
+    top: -200px
+    margin-bottom: -200px
+
+  .section-half-wrapper
+    .content
+      font-size: 16px
+      width: 700px
+
+  .to-all
+    .icon
+      width: 44px
+      height: 44px
+    .svg
+      width: 20px
+    .text
+      font-size: 18px
 
   .intro-slide
     height: 650px
@@ -129,6 +188,37 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .general-slider
+    .owl-stage-outer
+      padding-left: 0
+      padding-right: 0
+      left: 0
+      width: 100%
+
+  .cat-item
+    &-curve
+      display: none
+
+  .s-index-catalog
+    padding-top: 130px
+    .btn-wrap
+      display: block
+
+  .section-title
+    font-size: 32px
+    span
+      &:after
+        width: 17px
+        height: 17px
+
+  .section-half-wrapper
+    .content
+      width: 100%
+      padding-right: 0
+    .to-all
+      display: none!important
+
+
   .s-first
     padding-top: 101px
 
@@ -177,6 +267,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .cat-item
+    padding: 35px 25px
+    &-img
+      height: 180px
+      margin-bottom: 10px
+    &-title
+      font-size: 16px
 
   .intro-slider
     &:after
@@ -223,6 +320,33 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .general-slider
+    width: 100%
+    margin: 25px 0
+    .owl-stage-outer
+      padding: 0
+    .owl-nav
+      button.owl-prev, button.owl-next
+        width: 46px
+        height: 46px
+      button.owl-prev
+        left: -15px
+      button.owl-next
+        right: -15px
+
+  .cat-item
+    padding: 35px
+    &-img
+      height: 200px
+      margin-bottom: 20px
+
+  .section-title
+    font-size: 24px
+    span
+      &:after
+        height: 13px
+        width: 13px
+
   .intro-slider
     &:after
       width: 15px
@@ -251,6 +375,20 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .to-all
+    .icon
+      width: 36px
+      height: 36px
+      margin-right: 10px
+    .svg
+      width: 16px
+    .text
+      font-size: 14px
+
+  .section-half-wrapper
+    .content
+      font-size: 14px
 
   .intro-slide
     &-content
