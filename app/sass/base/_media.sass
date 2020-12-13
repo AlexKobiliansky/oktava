@@ -3,7 +3,52 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1800px)
+  .intro-socials
+    right: auto
+    top: auto
+    left: 15px
+    bottom: 30px
+    flex-direction: row
+    .soc-item
+      margin-right: 12px
+
+  .vertical-line
+    display: none
+
+@media (max-width: 1650px)
+  .intro-slider
+    &:after
+      width: 15px
+
+
 @media (max-width: 1500px)
+
+  .s-first
+    padding-top: 113px
+
+  .intro-slide
+    height: 750px
+    &-content
+      padding-left: 90px
+      padding-top: 260px
+    &-desc
+      font-size: 18px
+    h1
+      font-size: 70px
+    &:after
+      height: 555px
+    &-curve
+      top: 430px
+
+  .intro-slider
+    &:after
+      height: 555px
+
+  .intro-count
+    left: 105px
+    bottom: 50px
+
   .main-head
     padding: 25px 0 30px
     .logo
@@ -32,8 +77,87 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+
+  .intro-slide
+    height: 650px
+    &-content
+      padding-left: 50px
+    h1
+      font-size: 56px
+      padding-right: 150px
+      margin-bottom: 40px
+      &:after
+        width: 200px
+        bottom: -40px
+    &-desc
+      padding-right: 150px
+      padding-left: 20px
+      font-size: 16px
+    &:after
+      width: 65%
+      height: 450px
+    &-curve
+      font-size: 14px
+      top: 370px
+      right: 75px
+      .svg
+        width: 40px
+
+  .intro-socials
+    display: none
+
+
+  .intro-count
+    font-size: 30px
+    left: 65px
+
+  .intro-slider
+    &:before
+      width: 65%
+    &:after
+      width: calc((100vw - 930px)/2)
+      height: 450px
+
+
+  .intro-navigation
+    font-size: 16px
+    width: calc(100% - 60px)
+    transform: none
+    left: 30px
+    top: 25px
+
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-first
+    padding-top: 101px
+
+  .intro-slide
+    h1
+      font-size: 36px
+    &-content
+      padding-top: 200px
+    &-desc
+      font-size: 14px
+      padding-right: 50px
+    &-curve
+      top: 250px
+      font-size: 11px
+
+  .intro-forward
+    display: none
+
+  .intro-slider
+    &:before
+      display: none
+    &:after
+      width: calc((100vw - 690px)/2)
+
+  .intro-nav
+    &-prev, &-next
+      span
+        display: none
+
   .main-head
     .container
       flex-wrap: wrap
@@ -52,6 +176,41 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+
+  .intro-slider
+    &:after
+      width: calc((100vw - 510px)/2)
+      height: 400px
+
+  .intro-count
+    font-size: 20px
+    left: 45px
+    bottom: 30px
+
+  .intro-slide
+    height: 500px
+    &-content
+      padding-top: 150px
+      padding-left: 30px
+    h1
+      font-size: 28px
+      margin-bottom: 25px
+      padding-right: 100px
+      &:after
+        width: 150px
+        bottom: -25px
+    &:after
+      height: 400px
+    &-desc
+      font-size: 12px
+    &-curve
+      font-size: 6px
+      top: 150px
+      right: 50px
+      .svg
+        width: 25px
+
   .head-contacts
     order: 2
     width: 100%
@@ -63,6 +222,25 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .intro-slider
+    &:after
+      width: 15px
+
+  .intro-navigation
+    font-size: 16px
+    text-align: center
+
+  .intro-slide
+    h1
+      font-size: 22px
+      margin-bottom: 40px
+      &:after
+        display: none
+    &-desc
+      width: 70%
+      padding-right: 15px
+
   .main-head
     padding: 10px 0 15px
 
@@ -73,6 +251,20 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .intro-slide
+    &-content
+      padding-left: 15px
+    h1
+      font-size: 18px
+    &-desc
+      font-size: 10px
+
+  .intro-count
+    left: 30px
+
+  .intro-navigation
+    font-size: 14px
 
   .mm-logo
     width: 160px

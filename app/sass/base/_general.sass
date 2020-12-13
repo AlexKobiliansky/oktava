@@ -83,5 +83,26 @@ nav
     background-color: $accent
     color: #fff
 
+.s-first
+  padding-top: 153px
 
 
+.vertical-line
+  font-size: 18px
+  font-weight: 300
+  color: $accent
+  transform: rotate(-90deg)
+  position: absolute
+  z-index: 2
+  left: 10px
+  //top: 230px
+  line-height: 1
+  &:before
+    content: ''
+    position: absolute
+    height: 1px
+    //width: 1000px
+    background-color: $accent
+    top: 50%
+    transform: translateY(-50%)
+    right: calc(100% + 12px)
