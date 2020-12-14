@@ -72,6 +72,17 @@
 
 @media (max-width: 1500px)
 
+  .s-index-news
+    top: 0
+    padding-top: 50px
+    margin-bottom: 0
+
+  .news-item
+    &-title
+      font-size: 18px
+    &-date
+      font-size: 14px
+
   .s-video
     .decor-img
       display: none
@@ -276,6 +287,13 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-index-news
+    padding-bottom: 50px
+    .section-title
+      margin-bottom: 0
+    .btn-wrap
+      display: block
+
   .s-index-reviews
     .section-half-wrapper
       .content
@@ -395,6 +413,12 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .news-item
+    padding: 20px
+    height: 300px
+    &-title
+      font-size: 14px
+
   .video-wrapper
     padding: 50px 15px
     .vertical-line
@@ -455,6 +479,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .news-item
+    &-title
+      font-size: 18px
 
   .video-wrapper
     padding: 0
@@ -547,7 +575,9 @@
 
 @media (max-width: 390px)
 
-
+  .news-item
+    &-title
+      font-size: 16px
 
   .video-item, .video-player
     height: 240px

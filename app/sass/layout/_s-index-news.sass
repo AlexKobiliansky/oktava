@@ -1,0 +1,52 @@
+.s-index-news
+  position: relative
+  padding-top: 500px
+  top: -370px
+  margin-bottom: -370px
+  .btn-wrap
+    text-align: center
+    display: none
+  .section-title
+    margin-bottom: -50px
+  .section-half-wrapper
+    position: relative
+  .vertical-line
+    left: 30px
+    top: 690px
+    &:before
+      width: 240px
+
+.news-item
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-direction: column
+  padding: 30px 27px
+  position: relative
+  height: 380px
+  +bg-cover
+  color: #fff
+  font-weight: 700
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: #000
+    opacity: .5
+    left: 0
+    top: 0
+    +mt(.2s)
+  &-date
+    position: relative
+    z-index: 2
+    font-size: 16px
+  &-title
+    position: relative
+    z-index: 2
+    font-size: 22px
+    line-height: 1.5
+  &:hover
+    color: #fff
+    &:before
+      background-color: $accent
