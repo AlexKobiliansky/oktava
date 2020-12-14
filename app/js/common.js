@@ -66,6 +66,19 @@ $(document).ready(function(){
     });
 
 
+    $('.about-slider').owlCarousel({
+        loop:true,
+        nav:true,
+        navText: false,
+        items: 1,
+        dots: false,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        mouseDrag: false,
+        touchDrag: false,
+        smartSpeed:700,
+    });
+
 
 
     // new CircleType(document.getElementById('intro-curve'));

@@ -32,12 +32,68 @@
     display: none
 
 @media (max-width: 1650px)
+
+  .s-about
+    padding-top: 50px
+
+  .about-block
+    top: 0
+    padding-right: 50px
+    padding-bottom: 50px
+
+  .about-excerpt
+    max-height: none
+
+  .about-wrap
+    padding-left: 0
+    align-items: inherit
+
+  .about-slider
+    .owl-stage-outer
+      height: 100%
+    .owl-stage
+      height: 100%
+    .owl-item
+      height: 100%
+    .owl-nav
+      left: 0
+      bottom: 0
+
+  .about-slide
+    height: 100%
+
   .intro-slider
     &:after
       width: 15px
 
 
 @media (max-width: 1500px)
+
+  .about-slider
+    width: 600px
+    .owl-nav
+      button.owl-prev, button.owl-next
+        width: 80px
+        height: 80px
+        background-size: 16px 16px
+      button.owl-next
+        left: 80px
+
+
+  .about-block
+    width: calc(100% - 600px)
+    padding-left: 100px
+    .vertical-line
+      left: -3px
+    .section-title
+      font-size: 36px
+      span
+        &:after
+          width: 18px
+          height: 18px
+
+  .about-excerpt
+    font-size: 16px
 
   .cat-item
     padding-bottom: 50px
@@ -107,6 +163,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .about-wrap
+    flex-direction: column-reverse
+
+  .about-block
+    width: 100%
+
+  .about-slider
+    width: 100%
+    height: 600px
 
   .general-slider
     width: calc(100% - 30px)
@@ -187,6 +253,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .about-slider
+    height: 400px
+
+  .about-block
+    padding-top: 50px
+    .section-title
+      font-size: 32px
+      span
+        &:after
+          width: 17px
+          height: 17px
 
   .general-slider
     .owl-stage-outer
@@ -320,6 +398,22 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-about
+    .decor-img
+      .svg
+        width: 320px
+
+  .about-block
+    padding-left: 15px
+    padding-right: 15px
+    .vertical-line
+      display: none !important
+    .section-title
+      font-size: 24px
+      span
+        width: 13px
+        height: 13px
+
   .general-slider
     width: 100%
     margin: 25px 0
@@ -375,6 +469,19 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .about-slider
+    height: 300px
+    .owl-nav
+      button.owl-prev, button.owl-next
+        width: 40px
+        height: 40px
+        background-size: 12px 12px
+      button.owl-next
+        left: 40px
+
+  .about-excerpt
+    font-size: 14px
 
   .to-all
     .icon

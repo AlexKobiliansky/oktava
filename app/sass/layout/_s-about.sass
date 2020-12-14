@@ -1,0 +1,73 @@
+.s-about
+  position: relative
+  padding-top: 165px
+  .decor-img
+    position: absolute
+    top: -240px
+    left: -135px
+    .svg
+      fill: #fff
+      width: 557px
+      height: auto
+
+.about-wrap
+  display: flex
+  //align-items: flex-start
+  padding-left: calc((100vw - 1620px)/2)
+
+.about-slider
+  width: 690px
+  position: relative
+  .owl-nav
+    position: absolute
+    bottom: 0
+    left: 100%
+    button.owl-prev, button.owl-next
+      position: absolute
+      bottom: 0
+      width: 116px
+      height: 116px
+      background-image: url('../img/icons/select-arrow-white.svg')
+      background-position: center center
+      background-size: 25px 25px
+      background-repeat: no-repeat
+      cursor: pointer
+      +mt(.2s)
+      &:hover
+        background-color: lighten($accent, 10%)
+    button.owl-prev
+      transform: rotate(90deg)
+      background-color: #3c4e9a
+      left: 0
+    button.owl-next
+      transform: rotate(-90deg)
+      background-color: $accent
+      left: 116px
+
+
+.about-slide
+  height: 675px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.about-block
+  width: calc(100% - 690px)
+  background-color: #fff
+  box-shadow: 0 0 15px 5px rgba(#000, .1)
+  padding: 75px 140px 95px 155px
+  position: relative
+  top: -116px
+  //height: calc(100% - 116px)
+  .vertical-line
+    display: block!important
+    left: 25px
+    top: 210px
+    &:before
+      width: 170px
+
+.about-excerpt
+  max-height: 250px
+  overflow: hidden
+  margin-bottom: 30px
