@@ -36,6 +36,17 @@
 
 @media (max-width: 1650px)
 
+  .section-form
+    .form-bottom
+      flex-wrap: wrap
+    .notice
+      order: 2
+      width: 100%
+      margin-top: 20px
+      text-align: center
+    .jq-file
+      width: 290px
+
   .s-about
     padding-top: 50px
 
@@ -181,6 +192,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-form-wrapper
+    flex-direction: column
+
+  .consult
+    width: 100%
+    margin-bottom: 30px
+
+  .section-form
+    width: 100%
 
   .video-wrapper
     padding: 50px 50px 50px 100px
@@ -413,6 +434,41 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-form-wrapper
+    margin-top: 20px
+
+  .consult
+    flex-direction: column
+    align-items: center
+    padding-right: 0
+    &-content
+      width: 100%
+      text-align: center
+
+  .section-form
+    .form-labels-wrap
+      flex-direction: column
+      margin-bottom: 0
+      .left
+        width: 100%
+        padding-right: 0
+        margin-bottom: 20px
+      .right
+        width: 100%
+        label
+          margin-bottom: 10px
+      textarea
+        height: 200px
+    .form-bottom
+      align-items: center
+      flex-direction: column
+    .jq-file
+      width: auto
+      max-width: 290px
+      margin-bottom: 15px
+    .notice
+      padding: 0
+
   .news-item
     padding: 20px
     height: 300px
@@ -479,6 +535,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-form
+    padding-top: 0
 
   .news-item
     &-title

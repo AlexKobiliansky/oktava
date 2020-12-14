@@ -310,6 +310,11 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('input[type="file"]').styler({
+        filePlaceholder: "Прикрепить файл",
+        fileBrowse: "",
+    });
+
 
     /**
      * YOUTUBE SCRIPT
@@ -373,6 +378,20 @@ $(document).ready(function(){
     /**
      * end YOUTUBE SCRIPT
      */
+
+
+    $.validate({
+        form : '.validate-form',
+    });
+
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

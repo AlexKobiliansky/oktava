@@ -1,0 +1,31 @@
+form
+  label
+    display: block
+    margin-bottom: 20px
+  input, textarea
+    width: 100%
+    line-height: 1.2
+    font-size: 16px
+    padding: 17px 17px 15px
+    background-color: transparent
+    border: 1px solid #b6b6b6
+    &::placeholder
+      color: #888888
+    &:focus
+      border-color: $accent
+      &::placeholder
+        color: $accent
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none!important
+
+
+input[type='file'], /* FF, IE7+, chrome (except button) */
+input[type='file']::-webkit-file-upload-button /* chromes and blink button */
+    cursor: pointer
+    &:hover
+      color: $accent
