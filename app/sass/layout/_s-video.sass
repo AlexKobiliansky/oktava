@@ -1,0 +1,73 @@
+.s-video
+  position: relative
+  .decor-img
+    position: absolute
+    width: 480px
+    opacity: .24
+    left: 5%
+    top: 50%
+    transform: translateY(-50%)
+
+.video-wrapper
+  max-width: 1500px
+  position: relative
+  background-color: #fff
+  box-shadow: 0 0 15px 5px rgba(#000, .1)
+  margin-left: auto
+  padding: 90px 150px 90px 165px
+  .vertical-line
+    display: block!important
+    top: 250px
+    left: 28px
+    &:before
+      width: 170px
+
+
+.video-item
+  height: 525px
+  width: 100%
+  background-color: #374a52
+
+.video-player
+  height: 525px
+  position: relative
+
+.thumbnail-container
+  +bg-cover
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    +mt(.3s)
+    background-color: rgba(#000, .4)
+    opacity: 1
+    z-index: 1
+
+
+.btn-play
+  width: 76px
+  height: 52px
+  background-color: #c33734
+  display: inline-block
+  border-radius: 15px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 2
+  +mt(.3s)
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    border: 13px solid transparent
+    border-left: 23px solid #fff
+    left: 30px
+    top: 13px
+    +mt(.3s)
+  &:hover
+    background-color: darken(#c33734, 5%)

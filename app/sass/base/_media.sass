@@ -5,6 +5,9 @@
 
 @media (max-width: 1800px)
 
+  .s-video
+    .decor-img
+      left: 15px
 
   .general-slider
     width: calc(100% - 50px)
@@ -68,6 +71,10 @@
 
 
 @media (max-width: 1500px)
+
+  .s-video
+    .decor-img
+      display: none
 
   .about-slider
     width: 600px
@@ -163,6 +170,11 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .video-wrapper
+    padding: 50px 50px 50px 100px
+    .vertical-line
+      left: 0
 
   .s-index-reviews
     padding-top: 50px
@@ -383,6 +395,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .video-wrapper
+    padding: 50px 15px
+    .vertical-line
+      display: none!important
+
+  .video-item, .video-player
+    height: 400px
+
   .cat-item
     padding: 35px 25px
     &-img
@@ -435,6 +455,12 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .video-wrapper
+    padding: 0
+
+  .video-item, .video-player
+    height: 300px
 
   .review-slide
     &-title
@@ -520,6 +546,11 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+
+
+  .video-item, .video-player
+    height: 240px
 
   .review-slide
     &-img
