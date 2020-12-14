@@ -163,7 +163,7 @@ $(document).ready(function(){
 
 
 
-    $('.general-slider').owlCarousel({
+    $('.typic-slider').owlCarousel({
         loop: false,
         nav:true,
         navText: false,
@@ -193,12 +193,21 @@ $(document).ready(function(){
     function heightses() {
 
         $('.cat-item-title').matchHeight({byRow: true,});
+        $('.review-slide-title').matchHeight({byRow: true,});
 
         if ($(window).width()>=480) {
         }
     }
 
     heightses();
+
+    $(window).on('load', function (){
+        $(window).resize(function() {
+            heightses();
+        });
+
+        heightses();
+    });
 
     //circles for categories slider
     let categoriesNum = $('.index-cat-slider').find('.cat-item').length;
@@ -218,10 +227,43 @@ $(document).ready(function(){
     }
 
 
-
-
-
     $('.curve-span').css('animation-name', 'rotateAnimation')
+
+
+    $('.reviews-slider').owlCarousel({
+        loop: true,
+        nav:true,
+        navText: false,
+        items: 5,
+        dots: false,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true
+            },
+            390: {
+                items: 2,
+                nav: false,
+                dots: true
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 3
+            },
+            1500: {
+                items: 5
+            }
+        }
+    });
+
+    $('.review-slide').photoswipe({
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+    });
 
 
     $(window).scroll(function() {

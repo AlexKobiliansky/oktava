@@ -44,6 +44,9 @@ gulp.task('scripts', function() {
 		'app/libs/owl-carousel/owl.carousel.min.js',
 		'app/libs/circletype/circletype.min.js',
 		'app/libs/matchHeight/jquery.matchHeight-min.js',
+		'app/libs/photoswipe/photoswipe.min.js',
+		'app/libs/photoswipe/photoswipe-ui-default.min.js',
+		'app/libs/photoswipe/jquery.photoswipe.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

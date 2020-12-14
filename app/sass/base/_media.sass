@@ -164,6 +164,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-index-reviews
+    padding-top: 50px
+
   .s-index-services
     .decor-img
       right: 0
@@ -260,6 +263,28 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-index-reviews
+    .section-half-wrapper
+      .content
+        padding-left: 0
+        text-align: left
+    .section-title
+      text-align: left
+      span
+        padding-left: 0
+        &:after
+          position: relative
+          bottom: auto
+          transform: none
+
+  .review-slide
+    a
+      padding: 0
+      &:hover
+        box-shadow: none
+    &-title
+      margin-bottom: 10px
 
   .s-index-services
     padding-top: 50px
@@ -411,6 +436,12 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .review-slide
+    &-title
+      font-size: 14px
+    &-img
+      height: 240px
+
   .s-index-services
     .decor-img
       right: 0
@@ -489,6 +520,10 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .review-slide
+    &-img
+      height: 400px
 
   .about-slider
     height: 300px
