@@ -1,0 +1,112 @@
+.main-foot
+  background-color: #2e4191
+  color: #fff
+
+.foot-mnu-line
+  line-height: 1
+  padding: 14px 0
+  background-color: #364ca7
+
+.foot-mnu
+  ul
+    display: flex
+    justify-content: center
+  a
+    display: inline-block
+    font-size: 16px
+    font-weight: 500
+    color: #fff
+    white-space: nowrap
+    padding: 14px 44px 12px
+    border-right: 1px solid #5c76e1
+    &:hover
+      color: #6681f2
+  li
+    &:last-child
+      a
+        border-right: none
+    &:first-child
+      a
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          +mt(.2s)
+          width: 18px
+          height: 18px
+          background-image: url('../img/icons/grid-icon-white.svg')
+          left: 7px
+          top: 50%
+          transform: translateY(-50%)
+        &:hover
+          &:before
+            background-image: url('../img/icons/grid-icon-lightblue.svg')
+
+
+
+.foot-wrapper
+  padding: 45px 0
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  border-bottom: 1px solid #5c76e1
+
+
+.foot-socials
+  font-size: 0
+  .soc-item
+    display: inline-block
+    margin-right: 7px
+    &:last-child
+      margin-right: 0
+    .svg
+      width: 32px
+      height: auto
+      fill: #fff
+      +mt(.2s)
+    &:hover
+      .svg
+        fill: #6681f2
+
+.foot-left
+  display: flex
+  align-items: center
+  .logo
+    display: inline-block
+    margin-right: 67px
+
+
+.foot-item
+  font-size: 16px
+  &-title
+    font-weight: 500
+    margin-bottom: 9px
+    color: #6681f2
+  &-desc
+    a
+      color: #fff
+      &:hover
+        color: #6681f2
+  &:last-child
+    padding-right: 80px
+
+
+.footer-bottom-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 14px
+  padding: 35px 0
+  color: #6681f2
+  a
+    color: #6681f2
+    &:hover
+      color: #fff
+
+
+.dev-block
+  img
+    position: relative
+    margin-left: 5px
+    top: -3px
+

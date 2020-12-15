@@ -193,6 +193,47 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .foot-wrapper
+    flex-wrap: wrap
+
+  .foot-left
+    width: 100%
+    order: 2
+    justify-content: space-between
+    margin-top: 30px
+
+  .foot-item
+    &:last-child
+      padding-right: 0
+
+  .footer-bottom-line
+    flex-wrap: wrap
+    flex-direction: column
+
+  .foot-link
+    margin-bottom: 15px
+
+  .copyright
+    order: 3
+    width: 100%
+    text-align: center
+    margin-bottom: 15px
+
+  .dev-block
+    order: 4
+    width: 100%
+    text-align: center
+
+  .foot-mnu
+    a
+      font-size: 14px
+      padding-left: 30px
+      padding-right: 30px
+
+
+  .s-form
+    padding-bottom: 50px
+
   .s-form-wrapper
     flex-direction: column
 
@@ -307,6 +348,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .foot-mnu
+    a
+      font-size: 12px
+      padding: 12px 20px 10px
+    li
+      &:first-child
+        a
+          &:before
+            left: -4px
+
+  .foot-item
+    font-size: 14px
+    &-title
+      margin-bottom: 5px
 
   .s-index-news
     padding-bottom: 50px
@@ -434,6 +490,62 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .foot-wrapper
+    padding: 25px 0
+
+  .foot-item
+    width: 100%
+    text-align: center
+    margin-bottom: 15px
+
+  .foot-left
+    margin-top: 0
+    flex-direction: column-reverse
+    .logo
+      margin-right: 0
+
+  .foot-socials
+    margin-bottom: 25px
+
+  .footer-bottom-line
+    padding: 15px 0
+    font-size: 12px
+
+  .foot-link
+    margin-bottom: 12px
+
+  .copyright
+    margin-bottom: 20px
+    line-height: 1.2
+
+  .foot-mnu
+    padding: 15px 0
+    ul
+      flex-direction: column
+      align-items: center
+    a
+      font-size: 16px
+      padding: 0
+      border-right: none
+      position: relative
+      margin-bottom: 15px
+      &:after
+        content: ''
+        position: absolute
+        width: 100px
+        height: 1px
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -7px
+        //background-color: #6681f2
+    li
+      &:first-child
+        a
+          padding-left: 23px
+      &:last-child
+        a
+          margin-bottom: 0
+
   .s-form-wrapper
     margin-top: 20px
 
@@ -538,6 +650,7 @@
 
   .s-form
     padding-top: 0
+    padding-bottom: 50px
 
   .news-item
     &-title
