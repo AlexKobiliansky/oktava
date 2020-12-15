@@ -29,3 +29,49 @@ input[type='file']::-webkit-file-upload-button /* chromes and blink button */
     cursor: pointer
     &:hover
       color: $accent
+
+.form-title
+  line-height: 1.2
+  font-size: 32px
+  font-weight: 700
+  color: $accent
+  margin-bottom: 25px
+  span
+    position: relative
+    display: inline-block
+    &:after
+      content: ''
+      display: inline-block
+      position: relative
+      width: 16px
+      height: 16px
+      background-image: url('../img/icons/attr-arrow-blue.svg')
+      +bg-cover
+      left: 0
+      top: 0
+      margin-left: 20px
+
+.form-notice
+  color: #898989
+  font-size: 12px
+  line-height: 1.5
+  a
+    color: #898989
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+.popup-form
+  position: relative
+  margin: 0 auto
+  background-color: #fff
+  width: 100%
+  max-width: 580px
+  padding: 60px 83px 50px
+  .form-title
+    text-align: center
+  .btn
+    width: 100%
+    margin-bottom: 20px
+  .form-notice
+    text-align: center

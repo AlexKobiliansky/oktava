@@ -648,6 +648,17 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .popup-form
+    padding: 50px 25px
+
+  .form-title
+    font-size: 28px
+    span
+      &:after
+        width: 14px
+        height: 14px
+        margin-left: 15px
+
   .s-form
     padding-top: 0
     padding-bottom: 50px
@@ -746,6 +757,21 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .popup-form
+    padding-left: 20px
+    padding-right: 20px
+
+  .form-notice
+    font-size: 10px
+
+  .form-title
+    font-size: 24px
+    span
+      &:after
+        width: 13px
+        height: 13px
+        margin-left: 13px
 
   .news-item
     &-title

@@ -268,13 +268,9 @@ $(document).ready(function(){
     });
 
 
-    $(window).scroll(function() {
-        if($(this).scrollTop() > 60) {
-            $('.main-head').addClass('sticky')
-        } else {
-            $('.main-head').removeClass('sticky')
-        }
-    });
+
+
+
 
 
 
@@ -313,6 +309,18 @@ $(document).ready(function(){
     $('input[type="file"]').styler({
         filePlaceholder: "Прикрепить файл",
         fileBrowse: "",
+    });
+
+
+    $('.preloader').fadeOut();
+
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 60) {
+            $('.main-head').addClass('sticky')
+        } else {
+            $('.main-head').removeClass('sticky')
+        }
     });
 
 
@@ -380,8 +388,23 @@ $(document).ready(function(){
      */
 
 
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     $.validate({
         form : '.validate-form',
+        scrollToTopOnError: false
     });
 
     var uPhone = $('.user-phone');
@@ -394,15 +417,21 @@ $(document).ready(function(){
     });
 
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".contact-form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                // $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });

@@ -27,6 +27,15 @@
 </head>
 
 <body>
+<!-- preloader -->
+<div class="preloader">
+	<div class="sk-double-bounce">
+		<div class="sk-child sk-double-bounce-1"></div>
+		<div class="sk-child sk-double-bounce-2"></div>
+	</div>
+</div>
+<!-- /preloader -->
+
 
 <div id="page-container">
 	<!-- mobile-mnu -->
@@ -100,7 +109,7 @@
 
 			<div class="head-contacts">
 				<a href="tel:+88008080800" class="phone">8 (8172) 22-22-22</a>
-				<a href="#0" class="btn">Заказать звонок</a>
+				<a href="#popup-form" class="btn">Заказать звонок</a>
 			</div>
 
 			<button class="hamburger hamburger--spin" type="button" id="mmenu-btn">
@@ -836,6 +845,36 @@
 	<!-- ======= FOOTER END ======= -->
 
 
+</div>
+
+
+<div class="hidden">
+
+		<form class="contact-form popup-form validate-form" id="popup-form">
+
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Октава">
+			<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+			<input type="hidden" name="form_subject" value="Заявка с сайта Октава">
+			<!-- END Hidden Required Fields -->
+
+			<h3 class="form-title"><span>Закажите звонок</span></h3>
+
+			<label>
+				<input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+			</label>
+
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Телефон"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+			</label>
+
+			<button type="submit" class="btn">Отправить</button>
+
+			<div class="form-notice">Отправляя заявку, вы соглашаетесь с условиями <a href="#0">Политики конфиденциальности</a></div>
+		</form>
 </div>
 
 
