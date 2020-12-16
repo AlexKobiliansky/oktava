@@ -239,6 +239,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .faces-wrap
+    grid-template-columns: repeat(2, 1fr)
+
   .news-wrap
     grid-template-columns: repeat(3, 1fr)
     margin-bottom: 50px
@@ -456,6 +459,22 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-faces
+    h3
+      margin-bottom: 30px
+
+  .face-item
+    &-img
+      width: 100px
+      height: 100px
+    &-content
+      width: calc(100% - 100px)
+      padding-left: 15px
+    &-title
+      font-size: 14px
+    &-post
+      font-size: 12px
 
   h3
     font-size: 24px
@@ -855,6 +874,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-faces
+    padding-bottom: 40px
+
+  .faces-wrap
+    grid-template-columns: repeat(1, 1fr)
+    grid-gap: 20px
 
   .s-general
     li

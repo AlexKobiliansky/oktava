@@ -1,0 +1,32 @@
+.s-faces
+  padding-bottom: 60px
+  h3
+    margin-bottom: 50px
+
+.faces-wrap
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-column-gap: 30px
+  grid-row-gap: 55px
+
+.face-item
+  display: flex
+  align-items: flex-start
+  &-img
+    width: 145px
+    height: 145px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-content
+    width: calc(100% - 145px)
+    padding-left: 25px
+  &-title
+    line-height: 1.2
+    font-weight: 700
+    margin-bottom: 8px
+  &-post
+    font-size: 16px
+    line-height: 1.5
+    color: $accent
