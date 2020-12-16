@@ -223,9 +223,18 @@ $(document).ready(function(){
 
 
     //circles for services slider
-
     if ($('.index-serv-slider').length) {
         let servicesNum = $('.index-serv-slider').find('.cat-item').length;
+        let s;
+
+        for (s=0; s<servicesNum; s++) {
+            new CircleType(document.getElementById('service-curve-' + s));
+        }
+    }
+
+    //circles for services catalog
+    if ($('.serv-cat').length) {
+        let servicesNum = $('.serv-cat').find('.cat-item').length;
         let s;
 
         for (s=0; s<servicesNum; s++) {
