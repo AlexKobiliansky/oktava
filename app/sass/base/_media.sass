@@ -239,6 +239,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .news-wrap
+    grid-template-columns: repeat(3, 1fr)
+    margin-bottom: 50px
+
   .serts-wrap
     grid-template-columns: repeat(3, 1fr)
 
@@ -453,6 +457,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .news-wrap
+    grid-template-columns: repeat(2, 1fr)
+
   .sert-item
     height: 300px
 
@@ -620,6 +627,9 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .news-wrap
+    grid-gap: 10px
 
   .serts-wrap
     grid-gap: 10px
@@ -839,6 +849,13 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .news-wrap
+    .news-item
+      padding: 10px
+      height: 200px
+      &-title
+        font-size: 12px
+
   .serts-wrap
     grid-template-columns: repeat(2, 1fr)
 
@@ -1026,6 +1043,16 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+
+
+
+  .news-wrap
+    grid-template-columns: repeat(1, 1fr)
+    .news-item
+      padding: 20px
+      &-title
+        font-size: 14px
 
   .sert-item
     height: 200px
