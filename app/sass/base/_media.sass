@@ -92,6 +92,11 @@
 
 @media (max-width: 1500px)
 
+
+  .product-right
+    padding-left: 40px
+
+
   .vac-item
     &-head
       padding-left: 30px
@@ -218,6 +223,23 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .product-left
+    .share-line
+      display: none
+
+  .product-wrap
+    flex-direction: column
+    align-items: center
+
+  .product-right
+    width: 100%
+    padding-left: 0
+    .share-line
+      display: flex
+
+  .product-chars
+    margin-bottom: 25px
 
   .dark-form
     padding-left: 30px
@@ -381,6 +403,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .product-left
+    width: 100%
+
+  .product-slider-nav
+    width: 160px
+
+  .product-slider
+    width: calc(100% - 175px)
+
+  .breadcrumbs
+    a
+      font-size: 16px
+
   .vac-item
     &-head
       padding-top: 30px
@@ -529,6 +564,46 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .product-slider-wrap
+    flex-direction: column-reverse
+
+  .product-slider
+    width: 100%
+    margin-bottom: 15px
+
+
+
+
+  .product-slide
+    height: 400px
+
+  .product-slider-nav
+    width: 100%
+    position: relative
+    .slick-list
+      margin: 0 -7px
+    .slick-arrow
+      width: 20px
+      height: 20px
+      top: calc(50% - 10px)
+      bottom: auto
+    .slick-prev
+      transform: rotate(90deg)
+      left: 10px
+    .slick-next
+      transform: rotate(-90deg)
+      right: 10px
+      left: auto
+    .product-nav
+      margin: 0 7px 0
+
+  .char-item
+    font-size: 14px
+    &-desc
+      padding-left: 15px
+
+
 
   .foot-wrapper
     padding: 25px 0
@@ -688,6 +763,27 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .product-right
+    .share-line
+      margin-bottom: 20px
+
+  .s-product
+    .btn-wrap
+      text-align: center
+
+  .product-slide
+    height: 300px
+
+  .product-slider
+    margin-bottom: 10px
+
+  .product-slider-nav
+    .product-nav
+      height: 80px
+      margin: 0 5px
+    .slick-list
+      margin: 0 -5px
+
   body
     font-size: 16px
 
@@ -837,6 +933,12 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .product-slide
+    height: 240px
+
+  .char-item
+    font-size: 12px
 
   .breadcrumbs
     a

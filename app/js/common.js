@@ -66,18 +66,7 @@ $(document).ready(function(){
     });
 
 
-    $('.about-slider').owlCarousel({
-        loop:true,
-        nav:true,
-        navText: false,
-        items: 1,
-        dots: false,
-        animateIn: "fadeIn",
-        animateOut: "fadeOut",
-        mouseDrag: false,
-        touchDrag: false,
-        smartSpeed:700,
-    });
+
 
     if ($('#intro-curve').length) {
         new CircleType(document.getElementById('intro-curve'));
@@ -275,6 +264,11 @@ $(document).ready(function(){
         hideAnimationDuration: 0
     });
 
+    $('.product-slider').photoswipe({
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+    });
+
 
     $('img.svg').each(function(){
         var $img = jQuery(this);
@@ -311,6 +305,53 @@ $(document).ready(function(){
     $('input[type="file"]').styler({
         filePlaceholder: "Прикрепить файл",
         fileBrowse: "",
+    });
+
+
+
+    $('.about-slider').owlCarousel({
+        loop:true,
+        nav:true,
+        navText: false,
+        items: 1,
+        dots: false,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        mouseDrag: false,
+        touchDrag: false,
+        smartSpeed:700,
+    });
+
+
+    $('.product-slider').slick({
+        arrows:false,
+        dots: false,
+        infinite:true,
+        speed:500,
+        fade: true,
+        slidesToShow:1,
+        asNavFor: '.product-slider-nav'
+    });
+
+
+    $('.product-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-slider',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        vertical: true,
+        verticalSwiping: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            }
+        ]
     });
 
 
@@ -406,7 +447,7 @@ $(document).ready(function(){
 
 
     $(function() {
-        $("a[href='#popup-form']").magnificPopup({
+        $("a[href='#popup-form'], a[href='#product-popup']").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,
@@ -418,6 +459,11 @@ $(document).ready(function(){
             mainClass: "my-mfp-zoom-in"
         })
     });
+
+    $("a[href='#product-popup']").click(function(){
+        let title = $(this).data('title');
+        $('#order-title').text(title);
+    })
 
     $.validate({
         form : '.validate-form',
