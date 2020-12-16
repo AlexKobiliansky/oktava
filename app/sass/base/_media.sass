@@ -92,6 +92,10 @@
 
 @media (max-width: 1500px)
 
+  .serts-wrap
+    grid-gap: 30px
+    margin-bottom: 50px
+
   #map
     width: 800px
 
@@ -234,6 +238,9 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .serts-wrap
+    grid-template-columns: repeat(3, 1fr)
 
   .s-contacts
     padding-bottom: 0
@@ -446,7 +453,8 @@
 // ≥992px
 +media-breakpoint-down(md)
 
-
+  .sert-item
+    height: 300px
 
   .cat-items-wrap
     grid-template-columns: repeat(2, 1fr)
@@ -612,6 +620,12 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .serts-wrap
+    grid-gap: 10px
+
+  .sert-item
+    height: 240px
 
   .contacts-wrap
     width: 100%
@@ -825,6 +839,9 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .serts-wrap
+    grid-template-columns: repeat(2, 1fr)
+
   .s-contacts
     padding-bottom: 50px
 
@@ -1010,7 +1027,8 @@
 
 @media (max-width: 390px)
 
-
+  .sert-item
+    height: 200px
 
   .product-slide
     height: 240px
