@@ -92,6 +92,17 @@
 
 @media (max-width: 1500px)
 
+  #map
+    width: 800px
+
+  .contacts-absolute
+    top: 200px
+
+  .contacts-block
+    padding-left: 120px
+    padding-bottom: 50px
+    .vertical-line
+      left: 15px
 
   .product-right
     padding-left: 40px
@@ -223,6 +234,35 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-contacts
+    padding-bottom: 0
+
+  #map
+    width: 100%
+    height: 600px
+
+  .con-item.socials
+    margin-bottom: 0
+
+  .contacts-absolute
+    position: relative
+    width: 100%
+    top: 0
+    padding-bottom: 40px
+    .to-all
+      margin-left: 0
+      margin-top: 0
+
+  .contacts-block
+    box-shadow: none
+    padding: 0
+    .section-title
+      display: none
+    .vertical-line
+      display: none!important
+
+
 
   .cat-items-wrap
     grid-template-columns: repeat(3, 1fr)
@@ -406,6 +446,8 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+
+
   .cat-items-wrap
     grid-template-columns: repeat(2, 1fr)
 
@@ -570,6 +612,17 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .contacts-wrap
+    width: 100%
+
+  .con-item
+    margin-bottom: 30px
+    &:nth-child(even)
+      padding-left: 30px
+
+  #map
+    height: 400px
 
   .cat-items-wrap
     grid-gap: 10px
@@ -771,6 +824,16 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-contacts
+    padding-bottom: 50px
+
+  .con-item
+    width: 100%
+    padding-left: 0!important
+    &.socials
+      margin-bottom: 30px
+      top: 0
 
   .cat-items-wrap
     grid-template-columns: repeat(1, 1fr)
