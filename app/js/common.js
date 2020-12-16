@@ -211,6 +211,16 @@ $(document).ready(function(){
         }
     }
 
+    //circles for categories catalog
+    if ($('.cat-cat').length) {
+        let categoriesNum = $('.cat-cat').find('.cat-item').length;
+        let c;
+
+        for (c = 0; c < categoriesNum; c++) {
+            new CircleType(document.getElementById('category-curve-' + c));
+        }
+    }
+
 
     //circles for services slider
 
@@ -222,8 +232,6 @@ $(document).ready(function(){
             new CircleType(document.getElementById('service-curve-' + s));
         }
     }
-
-
 
 
     $('.curve-span').css('animation-name', 'rotateAnimation')

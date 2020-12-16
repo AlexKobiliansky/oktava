@@ -224,6 +224,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .cat-items-wrap
+    grid-template-columns: repeat(3, 1fr)
+
   .product-left
     .share-line
       display: none
@@ -403,6 +406,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .cat-items-wrap
+    grid-template-columns: repeat(2, 1fr)
+
   .product-left
     width: 100%
 
@@ -564,6 +570,9 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .cat-items-wrap
+    grid-gap: 10px
 
   .product-slider-wrap
     flex-direction: column-reverse
@@ -763,6 +772,10 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .cat-items-wrap
+    grid-template-columns: repeat(1, 1fr)
+      
+
   .product-right
     .share-line
       margin-bottom: 20px
@@ -933,6 +946,8 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+
 
   .product-slide
     height: 240px
