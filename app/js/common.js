@@ -326,6 +326,21 @@ $(document).ready(function(){
     });
 
 
+    $('.vac-item:first-child').addClass('active').find('.vac-item-body').show();
+
+    $('.vac-item-head').on("click", function(){
+        var parent = $(this).parents('.vac-item');
+
+
+        parent.toggleClass('active').find('.vac-item-body').slideToggle();
+
+        parent.siblings('.vac-item').each(function(){
+            $(this).removeClass('active');
+            $(this).find('.vac-item-body').slideUp();
+        });
+    });
+
+
     /**
      * YOUTUBE SCRIPT
      */
@@ -420,9 +435,19 @@ $(document).ready(function(){
 
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
-        var th = $(this);
-        var t = th.find(".btn").text();
-        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
+        let th = $(this);
+        let t;
+        if(th.hasClass('dark-form')) {
+            t = th.find(".btn-text").text();
+            th.find(".btn").prop("disabled", "disabled").addClass("disabled").find('.btn-text').text("Отправлено!");
+        } else {
+            t = th.find(".btn").text();
+            th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
+
+            console.log('sdsd')
+        }
+
+
 
         $.ajax({
             type: "POST",
@@ -430,7 +455,11 @@ $(document).ready(function(){
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
-                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                if(th.hasClass('dark-form')) {
+                    th.find(".btn").removeAttr('disabled').removeClass("disabled").find('.btn-text').text(t);
+                } else {
+                    th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                }
                 th.trigger("reset");
                 // $.magnificPopup.close();
             }, 2000);

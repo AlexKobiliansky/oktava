@@ -379,3 +379,37 @@ nav
 
 .mfp-close-btn-in .mfp-close
   color: $accent
+
+.breadcrumbs
+  line-height: 1
+  padding: 40px 0 25px
+  font-size: 0
+  a
+    display: inline-block
+    font-size: 18px
+    position: relative
+    color: #898989
+    &:hover
+      color: $accent
+    &:after
+      content: ''
+      display: inline-block
+      position: relative
+      width: 9px
+      height: 9px
+      background-image: url('../img/icons/attr-arrow-blue.svg')
+      +bg-cover
+      bottom: 0
+      margin-left: 15px
+      margin-right: 20px
+    &:last-child
+      color: $text
+      pointer-events: none
+      &:after
+        display: none
+
+p
+  margin-bottom: 30px
+
+.with-side-forms
+  overflow: hidden

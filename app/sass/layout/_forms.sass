@@ -75,3 +75,77 @@ input[type='file']::-webkit-file-upload-button /* chromes and blink button */
     margin-bottom: 20px
   .form-notice
     text-align: center
+
+
+.dark-form
+  position: relative
+  background-color: $accent
+  color: #fff
+  padding: 70px 0 40px 110px
+  .form-title
+    color: #fff
+    span
+      &:after
+        background-image: url('../img/icons/attr-arrow-white.svg')
+  input, textarea
+    color: #fff
+    border-color: #b6b6b6
+    &::placeholder
+      color: #fff
+    &:focus
+      border-color: #b6b6b6
+      color: #fff
+  textarea
+    height: 200px
+  .btn
+    display: block
+    margin-left: auto
+    height: 48px
+    border-color: #fff
+    color: #fff
+    padding-top: 7px
+    padding-bottom: 18px
+    margin-bottom: 20px
+    .svg
+      width: 22px
+      height: auto
+      fill: #fff
+      position: relative
+      margin-left: 10px
+      top: 5px
+    &:hover
+      background-color: #fff
+      color: $accent!important
+      .svg
+        fill: $accent
+    &.disabled
+      background-color: darken(#fff, 10%)
+      color: $accent
+      border-color: darken(#fff, 10%)
+      .svg
+        fill: $accent
+  .form-notice
+    text-align: center
+    color: #aabaff
+    a
+      color: #aabaff
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: calc((100vw - 1620px)/2)
+    top: 0
+    left: 100%
+    background-color: $accent
+  .form-content
+    position: relative
+    z-index: 3
+  .decor-img
+    position: absolute
+    width: 535px
+    height: auto
+    opacity: .1
+    left: 55px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 2

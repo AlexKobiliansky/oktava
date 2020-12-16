@@ -1,0 +1,40 @@
+.s-vacancy
+  padding-bottom: 35px
+
+.vac-item
+  background-color: #f9f9f9
+  position: relative
+  margin-bottom: 30px
+  &-head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    line-height: 1
+    padding: 45px 100px 45px 50px
+    border: 3px solid $accent
+    color: $accent
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      width: 14px
+      height: 14px
+      background-image: url('../img/icons/select-arrow-blue.svg')
+      +bg-cover
+      right: 75px
+      top: 50%
+      transform: translateY(-55%)
+  &-title
+    font-size: 24px
+  &-price
+    white-space: nowrap
+    padding-left: 15px
+  &-body
+    padding: 30px 50px 40px
+    display: none
+  &.active
+    .vac-item-head
+      &:after
+        transform: translateY(-55%) rotate(180deg)
+

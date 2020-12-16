@@ -36,6 +36,15 @@
 
 @media (max-width: 1650px)
 
+  .dark-form
+    padding-left: 50px
+    padding-right: 35px
+    &:after
+      width: 15px
+    .decor-img
+      left: 0
+
+
   .section-form
     .form-bottom
       flex-wrap: wrap
@@ -82,6 +91,18 @@
 
 
 @media (max-width: 1500px)
+
+  .vac-item
+    &-head
+      padding-left: 30px
+      padding-right: 70px
+      &:after
+        right: 40px
+    &-title
+      font-size: 20px
+    &-body
+      padding-left: 30px
+      padding-right: 30px
 
   .s-nopage
     padding: 170px 0 100px
@@ -197,6 +218,12 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .dark-form
+    padding-left: 30px
+    padding-right: 0
+    &:after
+      width: calc((100vw - 930px)/2)
 
   .foot-wrapper
     flex-wrap: wrap
@@ -353,6 +380,14 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .vac-item
+    &-head
+      padding-top: 30px
+      padding-bottom: 30px
+
+  .dark-form
+    display: none
 
   .foot-mnu
     a
@@ -653,6 +688,40 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  body
+    font-size: 16px
+
+  .breadcrumbs
+    padding-top: 0
+    a
+      font-size: 14px
+      &:after
+        width: 7px
+        height: 7px
+        margin-left: 10px
+        margin-right: 15px
+
+  .s-vacancy
+    padding-bottom: 25px
+
+  .vac-item
+    &-head
+      align-items: flex-start
+      flex-direction: column
+      padding: 20px 50px 20px 15px
+      border-width: 2px
+      &:after
+        right: 20px
+    &-title
+      margin-bottom: 10px
+      font-size: 18px
+    &-price
+      padding-left: 0
+      font-size: 14px
+    &-body
+      padding: 30px 15px
+      font-size: 14px
+
   .s-nopage
     h1
       font-size: 160px
@@ -768,6 +837,26 @@
       margin-left: 0
 
 @media (max-width: 390px)
+
+  .breadcrumbs
+    a
+      font-size: 12px
+      &:after
+        margin-left: 7px
+        margin-right: 10px
+
+  .vac-item
+    &-title
+      font-size: 16px
+    &-head
+      padding-top: 12px
+      padding-bottom: 12px
+      border-width: 1px
+      padding-right: 35px
+      &:after
+        right: 15px
+        width: 10px
+        height: 10px
 
   .s-nopage
     h1
