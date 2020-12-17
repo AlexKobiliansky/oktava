@@ -52,6 +52,8 @@ gulp.task('scripts', function() {
 		'app/libs/jquery-form-validator/form-validator/jquery.form-validator.min.js',
 		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
 		'app/libs/slick-slider/slick.min.js',
+		'app/libs/wow/wow.min.js',
+		'app/libs/scrollToId/jquery.malihu.PageScroll2id.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
