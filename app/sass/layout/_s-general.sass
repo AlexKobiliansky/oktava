@@ -4,17 +4,32 @@
     list-style-type: none
     padding: 0
     margin-bottom: 30px
-  li
-    position: relative
-    padding-left: 42px
-    &:before
-      content: ''
-      position: absolute
-      width: 14px
-      height: 14px
-      border-radius: 50%
-      background-color: $accent
-      left: 0
-      top: 8px
+    li
+      position: relative
+      padding-left: 42px
+      &:before
+        content: ''
+        position: absolute
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        background-color: $accent
+        left: 0
+        top: 8px
+  ol
+    list-style: none
+    counter-reset: list
+    margin-bottom: 30px
+    li
+      counter-increment: list
+      position: relative
+      padding-left: 0
+      &:before
+        content: counter(list) '. '
+        color: $accent
+        font-weight: 700
+
+
+
   .dark-form-top
     margin-bottom: 86px
