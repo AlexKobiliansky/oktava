@@ -511,15 +511,13 @@ $(document).ready(function(){
         } else {
             t = th.find(".btn").text();
             th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
-
-            console.log('sdsd')
         }
 
 
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
